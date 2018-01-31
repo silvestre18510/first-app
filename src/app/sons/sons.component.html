@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3" *ngFor="let son of name; let i = index;" >
+      <p [ngStyle]="{color: i>=4 ? 'pink' : 'green'}" > I am {{son}} and {{ i }} </p>
+    </div>
+<!--
+    <div class="col-xs-3">
+      <p> I am {{name[1]}}</p>
+    </div>
+-->
+    <div class="col-xs-3">
+      <button class="btn btn-primary" (click)="addOne($event)">How Many</button>
+    </div>
+    <div class="col-xs-3">
+      <p [innerText] = "getSonsLength()"></p> 
+    </div>
+  </div>
+</div>
+<p [ngClass]="{online: true}" [ngStyle]="{backgroundColor: getColor()}" *ngIf="evenOdd; else evenOdd3;">even</p>	
+<ng-template #evenOdd3>
+<p [ngClass]="{offline: true}"[ngStyle]="{backgroundColor: getColor()}"> odd</p>
+</ng-template>
+<br>
+<input type="text" class="form-control" [(ngModel)] = "inputName">
+<p>{{inputName}}</p>

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+     <!-- <input type="text" class="form-control" [(ngModel)]="age">-->
+      <input type="text" class="form-control" #ageInput>
+     <!-- <input type="text" class="form-control" [(ngModel)]="newChild">-->
+     <input type="text" class="form-control" #childInput >
+
+ <button type="button" name="button" class="btn btn-primary" (click)="onAddAge(ageInput)">Add Age</button>
+ <button type="button" name="button" class="btn btn-primary" (click)="onAddSon()">Add Son</button>
+ <button type="button" name="button" class="btn btn-primary" (click)="onAddDaughter()">Add Daughter</button>
+    </div>
+
+  </div>
+
+</div>

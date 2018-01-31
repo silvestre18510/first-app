@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3">
+      <p> I am {{getFirstName()}} </p>
+    </div>
+
+    <div class="col-xs-3">
+      <p> I am {{getSecondName()}} </p>
+    </div>
+    <div class="col-xs-3">
+      <button class="btn btn-primary" (click)="addOne()">How Many</button>
+    </div>
+    <div class="col-xs-3">
+      <p [innerText] ="getDaughtersLength()" ></p> 
+    </div>
+  </div>
+</div>
+<h2> Daughter model </h2>
+<h3> {{daughters[0].name}} {{daughters[0].age}}</h3>
+
